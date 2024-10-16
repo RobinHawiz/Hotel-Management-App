@@ -60,4 +60,9 @@ public class SqlData
                                                              connectionStringName,
                                                              true);
     }
+
+    public void CheckInGuest(int bookingId)
+    {
+        _db.SavedData("dbo.spBookings_CheckIn", new { Id = bookingId }, connectionStringName, true);
+    }
 }
