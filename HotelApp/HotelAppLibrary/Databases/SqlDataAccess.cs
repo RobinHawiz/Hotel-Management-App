@@ -34,7 +34,7 @@ public class SqlDataAccess : ISqlDataAccess
         }
     }
 
-    public void SavedData<T>(string sqlStatement, T parameters, string connectionStringName, bool isStoredProcedure = false)
+    public void SaveData<T>(string sqlStatement, T parameters, string connectionStringName, bool isStoredProcedure = false)
     {
         string connectionString = _config.GetConnectionString(connectionStringName);
         CommandType commandType = CommandType.Text;

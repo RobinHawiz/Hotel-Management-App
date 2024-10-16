@@ -40,7 +40,7 @@ public class SqlData
                                                                           connectionStringName,
                                                                           true);
 
-        _db.SavedData("dbo.spBookings_Insert",
+        _db.SaveData("dbo.spBookings_Insert",
                       new
                       {
                           roomId = availableRooms.First().Id,
@@ -63,6 +63,6 @@ public class SqlData
 
     public void CheckInGuest(int bookingId)
     {
-        _db.SavedData("dbo.spBookings_CheckIn", new { Id = bookingId }, connectionStringName, true);
+        _db.SaveData("dbo.spBookings_CheckIn", new { Id = bookingId }, connectionStringName, true);
     }
 }
