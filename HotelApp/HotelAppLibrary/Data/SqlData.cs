@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace HotelAppLibrary.Data;
-public class SqlData
+public class SqlData : IDatabaseData
 {
     private readonly ISqlDataAccess _db;
     private const string connectionStringName = "SqlDb";
@@ -64,5 +64,12 @@ public class SqlData
     public void CheckInGuest(int bookingId)
     {
         _db.SaveData("dbo.spBookings_CheckIn", new { Id = bookingId }, connectionStringName, true);
+    }
+
+    public RoomTypeModel GetRoomTypeModelById(int id)
+    {
+        return _db.LoadData<RoomTypeModel, dynamic>("dbo.sp_RoomTypes_GetById",
+                                                    new { id }, connectionStringName,
+                                                    true).FirstOrDefault();
     }
 }
