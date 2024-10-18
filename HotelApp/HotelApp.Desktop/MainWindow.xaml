@@ -46,7 +46,7 @@
                             <TextBlock Margin="5" Text="{Binding FirstName}"/>
                             <TextBlock Margin="5" Text="{Binding LastName}"/>
                         </StackPanel>
-                        <Button Margin="5" Padding="10" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Bottom">Check In</Button>
+                        <Button Margin="5" Padding="10" Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" VerticalAlignment="Bottom" Click="CheckInButton_Click">Check In</Button>
                         <StackPanel Orientation="Horizontal" Grid.Row="1">
                             <TextBlock FontWeight="Bold" Margin="5">Room:</TextBlock>
                             <TextBlock Margin="5" Text="{Binding Title}"/>
