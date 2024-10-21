@@ -57,7 +57,7 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Row="3">
                             <TextBlock FontWeight="Bold" Margin="5">Total Cost:</TextBlock>
-                            <TextBlock Margin="5" Text="{Binding TotalCost}"/>
+                            <TextBlock Margin="5" Text="{Binding Path=TotalCost, StringFormat= {}{0:c}}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
