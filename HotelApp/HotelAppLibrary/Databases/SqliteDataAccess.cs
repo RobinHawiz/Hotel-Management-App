@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -33,7 +32,7 @@ public class SqliteDataAccess : ISqliteDataAccess
     {
         string connectionString = _config.GetConnectionString(connectionStringName);
 
-        using (IDbConnection connection = new SqlConnection(connectionString))
+        using (IDbConnection connection = new SQLiteConnection(connectionString))
         {
             connection.Execute(sqlStatement, parameters);
         }
