@@ -8,5 +8,6 @@ Fyi this project is from a tutorial that I'm following. I'm doing this in order 
 - Creating a SQL Data Access Layer.
 - ASP.NET Razor Pages.
 - WPF Core.
+- Dependency injection.
 
 Side note: My early commit messages sometimes refer to stored procedures as storage procedures, which is wrong.
