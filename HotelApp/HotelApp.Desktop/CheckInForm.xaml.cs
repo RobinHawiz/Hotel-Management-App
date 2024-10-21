@@ -36,8 +36,6 @@ namespace HotelApp.Desktop
         {
             _data = data;
 
-            CultureInfo.CurrentCulture = new CultureInfo("en-US", false);
-
             firstNameText.Text = _data.FirstName;
             lastNameText.Text = _data.LastName;
             titleText.Text = _data.Title;
