@@ -29,6 +29,8 @@ namespace HotelApp.Desktop
         {
 
             InitializeComponent();
+            // Change the current culture to en-US.
+            CultureInfo.CurrentCulture = new CultureInfo("en-US", false);
             _db = db;
         }
 
